@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos Gerais */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: var(--text-shadow);
+    line-height: 50px;
+    margin: 10px 0;
+}
+
+button.purple-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    filter: var(--text-filter);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+button.purple-button:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
+/* Header */
+header {
+    width: 100vw;
+    position: absolute;
+}
+
+header .container {
+    padding: 30px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header .logo svg {
+    height: 30px;
+    color: var(--primary-color);
+}
+
+header .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+header .mobile-menu div {
+    background-color: var(--text-color);
+    width: 24px;
+    height: 2px;
+    border-radius: 5px;
+}
+
+header .desktop-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #190f2c 0%, #0F172A 100%);
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section svg {
+    color: var(--primary-color);
+    height: 150px;
+    filter: var(--primary-filter);
+}
+
+.hero-section h1 span {
+    color: var(--primary-color);
+    text-shadow: var(--text-shadow);
+    filter: var(--text-filter);
+}
+
+.hero-section p {
+    color: var(--second-text-color);
+    margin: 0 10px;
+}
