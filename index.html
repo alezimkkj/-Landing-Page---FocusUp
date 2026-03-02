@@ -27,33 +27,44 @@
                     <div></div>
                 </div>
                 <ul class="desktop-menu">
-                    <li>Início</li>
-                    <li>App</li>
-                    <li>Contate-nos</li>
-                    <li>Suporte</li>
+                    <li class="active"><a href="">Início</a></li>
+                    <li><a href="">App</a></li>
+                    <li><a href="">Contate-nos</a></li>
+                    <li><a href="">Suporte</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="hero-section">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-            <path fill-rule="evenodd"
-                d="M11.47 10.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 12.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
-                clip-rule="evenodd" />
-            <path fill-rule="evenodd"
-                d="M11.47 4.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 6.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
-                clip-rule="evenodd" />
-        </svg>
+        <div class="container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd"
+                    d="M11.47 10.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 12.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
+                    clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                    d="M11.47 4.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 6.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
+                    clip-rule="evenodd" />
+            </svg>
 
-        <h1>Dê um <span>UP</span> na sua rotina</h1>
-        <p>Sua rotina em resultados reais: menos distração, mais realização.</p>
-        <button class="purple-button">Saiba Mais</button>
+            <img class="medium" src="assets/images/appImg.png" alt="App FocusUp">
+            <img class="big" src="assets/images/appBigScreen.png" alt="App FocusUp">
+            <img class="fullBig" src="assets/images/appFullBigScreen.png" alt="App FocusUp">
+
+            <div class="text-area">
+                <h1>Dê um <span>UP</span> na sua rotina</h1>
+                <p class="normalText">Sua rotina em resultados reais: menos distração, mais realização.</p>
+                <p class="bigText">Sua rotina em resultados reais: organize tarefas, elimine distrações e mantenha o
+                    foco no que realmente importa. Produtividade simples, clara e feita para quem quer evoluir todos os
+                    dias.</p>
+                <button class="purple-button">Saiba Mais</button>
+            </div>
+        </div>
     </section>
 
     <section class="benefits-section">
         <h2>Benefícios</h2>
-        
+
         <div class="cards-area">
             <div class="card">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -99,6 +110,113 @@
             </div>
         </div>
     </section>
+
+    <section class="timer-section">
+        <div class="container">
+            <h2>Controle seu foco. <span>Domine seu tempo.</span></h2>
+
+            <div class="timer-area">
+                <div id="timer">25:00</div>
+                <button id="restart" class="purple-button ">Reiniciar</button>
+                <button id="start" class="purple-button">Iniciar</button>
+                <button id="pause" class="purple-button">Pausar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="container">
+            <h2>Resultados Positivos</h2>
+
+            <div class="reviews-area">
+                <div class="review">
+                    <div class="left">
+                        <img src="assets/images/pessoa1.avif" alt="Foto de Perfil">
+                    </div>
+                    <div class="right">
+                        <p class="user-name">Lucas M.</p>
+                        <p class="user-comment">Finalmente consegui manter o foco nos estudos sem me distrair toda hora.
+                            Simples e muito eficiente.</p>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="left">
+                        <img src="assets/images/pessoa2.avif" alt="Foto de Perfil">
+                    </div>
+                    <div class="right">
+                        <p class="user-name">Ana S.</p>
+                        <p class="user-comment">O FocusUp me ajudou a organizar meu dia e parar de procrastinar. Uso
+                            todos
+                            os dias.</p>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="left">
+                        <img src="assets/images/pessoa3.jpg" alt="Foto de Perfil">
+                    </div>
+                    <div class="right">
+                        <p class="user-name">Carlos R.</p>
+                        <p class="user-comment">O timer mudou minha produtividade. Produzo mais em menos tempo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605" />
+        </svg>
+
+        <h1>E aí, quer mudar de nível?</h1>
+        <p>Comece agora a transformar sua rotina, aumentar seu foco e conquistar resultados reais.</p>
+        <button class="purple-button">Ver planos</button>
+    </section>
+
+    <footer>
+        <div class="contacts">
+            <a href="" class="contact">
+                <div class="image-area">
+                    <img src="assets/images/mail.svg" alt="Mail">
+                </div>
+                contato@focusup.com
+            </a>
+
+            <a href="" class="contact">
+                <div class="image-area">
+                    <img src="assets/images/instagram.svg" alt="Instagram">
+                </div>
+                @focusup.app
+            </a>
+
+            <a href="" class="contact">
+                <div class="image-area">
+                    <img src="assets/images/twiiter.svg" alt="Twitter">
+                </div>
+                @focusupapp
+            </a>
+
+            <a href="" class="contact">
+                <div class="image-area">
+                    <img src="assets/images/linkedin.svg" alt="Twitter">
+                </div>
+                FocusUp
+            </a>
+
+            <a href="" class="contact">
+                <div class="image-area">
+                    <img src="assets/images/youtube.svg" alt="Twitter">
+                </div>
+                FocusUp Oficial
+            </a>
+        </div>
+
+        <p>© 2026 FocusUp. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="assets/scripts/script.js"></script>
 </body>

@@ -9,20 +9,24 @@
     font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    padding-bottom: 700px;
+    overflow-x: hidden;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: 800;
     text-shadow: var(--text-shadow);
     line-height: 50px;
@@ -30,7 +34,7 @@ h1 {
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: 700;
     text-shadow: var(--text-shadow);
     margin-bottom: 20px;
@@ -58,11 +62,13 @@ button.purple-button:hover {
 
 /* Header */
 header {
-    width: 100vw;
+    width: 100%;
     position: absolute;
 }
 
 header .container {
+    display: flex;
+    justify-content: space-between;
     padding: 30px;
 }
 
@@ -74,8 +80,8 @@ header .logo {
 }
 
 header .logo svg {
-    height: 30px;
     color: var(--primary-color);
+    height: 30px;
 }
 
 header .mobile-menu {
@@ -93,16 +99,38 @@ header .mobile-menu div {
 
 header .desktop-menu {
     display: none;
+    gap: 30px;
+}
+
+header .desktop-menu li a {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: .3s;
+}
+
+header .desktop-menu li:hover a,
+header .desktop-menu li.active a {
+    color: var(--primary-color);
 }
 
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, #190f2c 0%, #0F172A 100%);
+}
+
+.hero-section .container {
     min-height: 98vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.hero-section img,
+.bigText {
+    display: none;
 }
 
 .hero-section svg {
@@ -119,7 +147,6 @@ header .desktop-menu {
 
 .hero-section p {
     color: var(--second-text-color);
-    margin: 0 10px;
 }
 
 /* Benefits Section */
@@ -135,15 +162,26 @@ header .desktop-menu {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
+    justify-content: center;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .cards-area .card {
-    max-width: 300px;
     background-color: var(--second-color);
+    max-width: 300px;
+    height: 300px;
     padding: 20px;
     border-radius: 20px;
     filter: var(--text-filter);
     margin: auto;
+    transition: .3s;
+}
+
+.cards-area .card:hover {
+    transform: translateY(-8px);
 }
 
 .cards-area .card svg {
@@ -160,4 +198,321 @@ header .desktop-menu {
     color: var(--second-text-color);
     font-size: 14px;
     line-height: 15px;
+}
+
+/* Timer Section */
+.timer-section {
+    background-color: var(--timer-bg);
+    border-top: var(--section-border);
+    box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.timer-section .container {
+    flex-direction: column;
+}
+
+.timer-section h2 span {
+    color: var(--primary-color);
+}
+
+.timer-section .timer-area #timer {
+    font-size: 5.5rem;
+    font-weight: 600;
+    margin: 35px 0;
+}
+
+.timer-section .timer-area button#restart,
+.timer-section .timer-area button#pause {
+    background-color: var(--text-color);
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    filter: none;
+    box-shadow: var(--text-shadow);
+    padding: 10px 15px;
+    margin: 20px 10px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.timer-section .timer-area button#restart:hover,
+.timer-section .timer-area button#pause:hover {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+/* Reviews Section */
+.reviews-section {
+    background-color: var(--benefits-bg);
+    box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px 0;
+    border-top: var(--section-border);
+}
+
+.reviews-section .container {
+    flex-direction: column;
+}
+
+.reviews-area {
+    padding: 0 30px;
+}
+
+.reviews-area .review {
+    background: rgba(201, 40, 255, 0.3);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    text-align: left;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+}
+
+.review .left {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    margin-right: 20px;
+}
+
+.review .left img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.review .right .user-name {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.review .right .user-comment {
+    font-size: 13px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #190f2c 0%, #0F172A 100%);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-top: var(--section-border);
+}
+
+.cta-section svg {
+    color: var(--primary-color);
+    height: 150px;
+    filter: var(--primary-filter);
+}
+
+.cta-section h1 {
+    font-size: 2.3rem;
+}
+
+.cta-section h1 span {
+    color: var(--primary-color);
+    text-shadow: var(--text-shadow);
+    filter: var(--text-filter);
+}
+
+.cta-section p {
+    color: var(--second-text-color);
+    margin: 0 25px;
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 60px;
+    border-top: var(--section-border);
+}
+
+footer .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a {
+    color: var(--text-color);
+    width: fit-content;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+footer a .image-area {
+    background-color: var(--second-color);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+footer a img {
+    height: 15px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Responsividade */
+
+/* Tablets */
+@media(min-width: 768px) {
+    .benefits-section .cards-area {
+        grid-template-columns: repeat(2, auto);
+        gap: 40px;
+    }
+}
+
+/* Telas pequenas */
+@media(min-width: 1024px) {
+    header .mobile-menu {
+        display: none;
+    }
+
+    header .desktop-menu {
+        display: flex;
+    }
+
+    .hero-section .container {
+        flex-direction: row;
+        padding-left: 50px;
+    }
+
+    .hero-section svg {
+        display: none;
+    }
+
+    .hero-section .text-area {
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 4rem;
+        line-height: 60px;
+        margin-bottom: 30px;
+    }
+
+    .hero-section button.purple-button {
+        margin: 20px 0;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+
+    .hero-section img.medium {
+        max-width: 400px;
+        display: block;
+        order: 1;
+        filter: var(--text-filter);
+    }
+
+    footer .contacts {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+}
+
+/* Telas Médias */
+@media(min-width: 1440px) {
+    .container {
+        max-width: 1200px !important;
+        margin: auto;
+    }
+
+    header .container {
+        padding: 50px;
+    }
+
+    .hero-section .container {
+        justify-content: left;
+        padding-left: 50px;
+    }
+
+    .hero-section .container .text-area {
+        text-align: left;
+    }
+
+    .hero-section img.medium,
+    .normalText {
+        display: none;
+    }
+
+    .hero-section img.big {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 20px;
+        max-width: 550px;
+        display: block;
+        order: 1;
+        filter: var(--text-filter);
+    }
+
+    .hero-section h1 {
+        max-width: 500px;
+    }
+
+    .bigText {
+        display: block;
+        max-width: 500px;
+        line-height: 20px;
+    }
+
+    .benefits-section {
+        padding: 40px 0;
+    }
+
+    .benefits-section .cards-area {
+        grid-template-columns: repeat(4, auto);
+        gap: 40px;
+    }
+}
+
+@media(min-width: 1600px) {
+    .hero-section img.big {
+        display: none;
+    }
+
+    .hero-section .container {
+        justify-content: space-between;
+        padding-left: 50px;
+    }
+
+    .hero-section img.fullBig {
+        max-width: 550px;
+        display: block;
+        order: 1;
+        filter: var(--text-filter);
+        margin-top: 50px;
+        margin-right: -50px;
+    }
 }
